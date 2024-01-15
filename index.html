@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="./images/volleball.png">
+    <script src="index.js" defer></script>
+    <title>Volley Match</title>
+</head>
+<body>
+    <header>
+        <img class="title-image" src="./images/volleball.png">
+        <div class="header-title">Live Scores - VolleyBall</div>
+        <img class="title-image" src="./images/volleball.png">
+    </header>
+    <section class="score-sets">
+        <span id="team1"></span>
+        <span id="sets-sign">Sets</span>
+        <span id="team2"></span>
+        <img class="team-img" id="imgTeamA">
+        <span class="sets" id="setsA"></span>
+        <span id="delimeterSets">-</span>
+        <span class="sets" id="setsB"></span>
+        <img class="team-img" id="imgTeamB">
+    </section>
+    <section class="score-games">
+        <span class="grid-el" id="game-sign">Game Score</span>
+        <span class="grid-el" id="a-points"></span>
+        <span class="grid-el" id="delimeter">-</span>
+        <span class="grid-el" id="b-points"></span>
+        <button class="addButton but_hover grid-el" id="addApoint" onclick="addApoint()">Add Point</button>
+        <button class="timeout timeout_button grid-el" onclick="setTimeout()">Timeout</button>
+        <button class="addButton but_hover grid-el" id="addBpoint" onclick="addBpoint()">Add Point</button>
+    </section>
+    <table>
+        <tr>
+          <th>Set 1</th>
+          <th>Set 2</th>
+          <th>Set 3</th>
+          <th>Set 4</th>
+          <th>Set 5</th>
+        </tr>
+        <tr>
+          <td id="set1-results">-</td>
+          <td id="set2-results">-</td>
+          <td id="set3-results">-</td>
+          <td id="set4-results">-</td>
+          <td id="set5-results">-</td>
+        </tr>
+      </table>
+    <div class="court-game">
+        <img src="./images/players/player.png" class="player" id="player1">
+        <img src="./images/court.jpg" class="court-image"> 
+        <img src="./images/players/player-left.jpg" class="player" id="player2">
+        <span id="serving-team"></span>
+        <span id="timer"></span>
+    </div>
+
+    </div>
+    
+
+    
+</body>
+</html>

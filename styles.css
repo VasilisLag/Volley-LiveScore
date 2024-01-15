@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Graduate&family=Libre+Baskerville&display=swap');
+@import url('https://fonts.cdnfonts.com/css/60s-scoreboard');
+
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    background-color: rgba(0,255,0,0.3);
+    margin-bottom: 2%;
+}
+
+.title-image{
+    width: 3%;
+    height: 3%;
+}
+
+.header-title{
+    font-size: 2vw;
+    padding:2vw;
+    font-family: 'Graduate', serif;
+}
+
+.score-sets{
+    display: grid;
+    width: 50%;
+    margin: auto;
+    grid-template-columns: 2fr 1fr 1fr 1fr 2fr ;
+    grid-template-rows: 8vh;
+    grid-template-areas: 
+    "a b b b c"
+    "d e f g h"
+    ;
+    align-items: center;   
+    justify-items: center;
+    font-size: 2vw;
+    margin-bottom: 2%;
+}
+
+#team1{
+    grid-area: a;
+}
+#team2 {
+    grid-area: c;
+}
+.team-img{
+    height: 5vw;
+}
+
+#imgTeamA{
+    grid-area: d;
+}
+#imgTeamB{
+    grid-area: h;
+}
+
+#sets-sign{
+    grid-area: b;
+    align-self: flex-end;
+}
+
+.sets{
+    font-weight: bold;
+    font-size: 3vw;
+}
+
+#delimeterSets{
+    grid-area: f;
+}
+
+#setsA{
+    justify-self: flex-end;
+    grid-area: e;
+}
+#setsB{
+    justify-self: flex-start;
+    grid-area: g;
+}
+
+.score-games{
+    display: grid;
+    width: 30%;
+    margin: auto;
+    grid-template-columns:2fr 1fr 2fr ;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "a a a"
+    "b c d"
+    "e f g"
+
+    ;
+    align-items: center;   
+    justify-items: center;
+    font-size: 2vw;
+    margin-bottom: 2%;
+    background-color: rgba(128, 128, 128, 0.425);
+    border: 3px dotted black;
+}
+
+
+
+.grid-el{
+    padding: 1%;
+}
+
+#game-sign{
+    grid-area: a;
+
+}
+
+#a-points{
+    grid-area: b;
+    font-family: '60s Scoreboard', serif;
+}
+
+#delimeter{
+    grid-area: c;
+}
+
+#b-points{
+    grid-area: d;
+    font-family: '60s Scoreboard', serif;
+}
+
+#addApoint{
+    grid-area: e;
+}
+
+#addBpoint{
+    grid-area: g;
+}
+
+.addButton{
+    font-size: 1vw;
+    background-color: #0070bf;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 2%;
+}
+
+.but_hover:hover{
+    cursor: pointer;
+    background-color: aqua;
+}
+
+.timeout{
+    font-size: 1vw;
+    grid-area: f;
+    background-color: red;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 2%;
+}
+
+.timeout_button:hover{
+    cursor: pointer;
+    background-color: rgb(42, 4, 4);
+    color: white;
+}
+
+.court-game{
+    display: grid;
+    width: 70%;
+    margin: auto;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: 5fr 1fr;
+    grid-template-areas: 
+    "a b c"
+    "d d d"
+    ;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}
+
+table {
+    width: 30%;
+    border-collapse: collapse;
+    margin: 2% auto;
+  }
+
+  th, td {
+    padding: 0.5vw;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  th {
+    background-color: #f0f0f0;
+  }
+
+
+.court-image{
+    width: 100%;
+    grid-area: b;
+    justify-self: center;
+}
+
+#serving-team{
+    margin-top: 1%;
+    grid-area: d;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    justify-self: center;
+}
+
+#timer{
+    margin-top: 1%;
+    grid-area: e;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    justify-self: center;
+}
+
+#player1{
+    grid-area: a;
+    justify-self: end;
+    display: none;
+}
+
+#player2{
+    grid-area: c;
+    justify-self: start;
+    display: none;
+}
+
+.player{
+    width: 15%;
+}
+
+
+@media only screen and (max-width: 800px) {
+
+    header{
+        margin-bottom: 8%;
+    }
+
+    .score-sets{
+        width: 70%;
+        font-size: 4vw;
+        grid-template-rows: 4vh 12vh;
+    }
+    .team-img{
+        
+        height: 10vh;
+    }
+    .sets{
+        font-size: 4vw;
+    }
+
+    .score-games{
+        width: 40%;
+        font-size: 4vw;
+        margin-bottom: 7%;
+    }
+
+    .addButton{
+        font-size: 1.5vw;
+        padding: 5%;
+    }
+
+    .timeout{
+        font-size:1.5vw ;
+        padding: 5%;
+    }
+
+    .court-game{
+        grid-template-columns: 1fr 1.5fr 1fr;
+    }
+
+    .player{
+        width: 40%;
+    }
+    table {
+        width: 60%;
+      }
+    
+      th, td {
+        font-size: 1,2vw;
+
+      }
+
+}
+
+@media only screen and (max-width: 525px) {
+
+    header{
+        margin-bottom: 10%;
+        padding: 4vw 0;
+    }
+
+    .header-title{
+        font-size: 4vw;
+    }
+
+    .score-sets{
+        width: 100%;
+        font-size: 4vw;
+        grid-template-rows: 6vh 10vh;
+        margin-bottom: 14%;
+    }
+    .team-img{
+        height: 6vh;
+    }
+
+    #team1{
+        align-self: flex-end;
+    }
+    #team2{
+        align-self: flex-end;
+    }
+
+    .sets{
+        font-size: 6vw;
+    }
+
+    .score-games{
+        width: 80%;
+        margin-bottom: 15%;
+        font-size: 6vw;
+    }
+
+    .court-game{
+        grid-template-columns: 1fr 3fr 1fr;
+    }
+
+    .player{
+        width: 60%;
+    }
+
+    .timeout{
+        font-size: 3vw;
+    }
+
+    .addButton{
+        font-size: 2.5vw;
+    }
+
+    table {
+        width: 80%;
+        
+    }
+
+}
